@@ -1,0 +1,8 @@
+default:
+  - 'build'
+  - 'php'
+  - 'watch'
+
+build:
+  - 'compass'
+  - 'uglify'

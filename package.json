@@ -1,0 +1,25 @@
+{
+  "name": "edusales_landing_page",
+  "description": "Landing Page for Gotamio",
+  "version": "0.0.0",
+  "license": "ISC",
+  "author": {
+    "name": "Ivan Lucas"
+  },
+  "repository": "https://Yadu7715@bitbucket.org/gotamio/edusales-landing-page.git",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt": "*"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-concurrent": "^2.1.0",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-php": "^1.5.1",
+    "load-grunt-config": "*",
+    "load-grunt-tasks": "*"
+  }
+}
