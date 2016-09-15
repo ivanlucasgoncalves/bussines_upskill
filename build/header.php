@@ -13,33 +13,31 @@
 
 </head>
 <body>
-	<header id="header">
+	<div class="wrapper">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-md-12 div_logo">
-					<a class="logo" href="/"></a>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<form id="contact" action="email.php" method="post">
-						<div class="blk-form">
-							<label for="company">Company</label>
-							<input type="text" id="company" name="company">
-						</div>
-						<div class="blk-form blk-submit">
-							<div class="ipt-submit">
-								<span class="spa-loader">
-									<div class="la-ball-clip-rotate la-sm">
-										<div></div>
-									</div>
-								</span>
-								<input type="submit" value="submit" name="submit" id="submit">
+			<header id="header">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="top_header">
+							<div class="top_left">
+								<a class="logo" href="/">
+									<figure>
+										<img src="../inc/img/logo_entamio.jpg" alt="Logo Entamio">
+									</figure>
+								</a>
+							</div>
+							<div class="top_right">
+								<a class="tel" href="1300639837">1300 639 837</a>
 							</div>
 						</div>
-						<div class="msg-contact">We are going to keep in touch soon. Thank you!!</div>
-					</form>
+					</div>
 				</div>
-			</div>
-		</div>
-	</header>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="banner_top">
+							<h1>When one door closes, <br/>another opens...</h1>
+							<h2>Get where you want to go, <br/>upskill with Entamio.</h2>
+						</div>
+					</div>
+				</div>
+			</header>

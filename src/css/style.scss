@@ -5,8 +5,8 @@
 // 02. Fonts
 // 03. Main Style
 // 04. Header
-// 05. Give your Team
-// 06. Entamio Education
+// 05. Form
+// 06.
 // 07. Footer
 // 08. Responsive
 // =============================================================================
@@ -16,7 +16,6 @@
 // 01. Includes
 // =============================================================================
 
-@import "compass";
 @import "clean";
 @import "variables";
 @import "animations";
@@ -28,46 +27,72 @@
 // =============================================================================
 
 @font-face {
-	font-family: 'icomoon';
-	src:  url('../fonts/icomoon.eot?ajxpef');
-	src:  url('../fonts/icomoon.eot?ajxpef#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.ttf?ajxpef') format('truetype'),
-		url('../fonts/icomoon.woff?ajxpef') format('woff'),
-		url('../fonts/icomoon.svg?ajxpef#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'edusales';
+  src:  url('../fonts/edusales.eot?fucqcg');
+  src:  url('../fonts/edusales.eot?fucqcg#iefix') format('embedded-opentype'),
+    url('../fonts/edusales.ttf?fucqcg') format('truetype'),
+    url('../fonts/edusales.woff?fucqcg') format('woff'),
+    url('../fonts/edusales.svg?fucqcg#edusales') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
+
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon' !important;
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'edusales' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.icon-certificate:before {
-	content: "\e900";
+
+.icon-affordable:before {
+  content: "\e900";
 }
-.icon-light-bulb:before {
-	content: "\e901";
+.icon-coaching:before {
+  content: "\e901";
 }
-.icon-magnifyingglass:before {
-	content: "\e902";
+.icon-online:before {
+  content: "\e902";
+}
+.icon-google-plus:before {
+  content: "\ea8b";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
 }
 
 // =============================================================================
 // 03. Main Style
 // =============================================================================
 
-header,
-.give_your_team,
-.entamio_education,
-footer {
-  max-width: 1426px;
-  margin: 0 auto;
+//Wrapper background | Max width container
+.wrapper {
+	background: #ba1f1c;
+  background: -moz-linear-gradient(left,  #ba1f1c 0%, #de4a2f 100%, #de4a2f 100%);
+  background: -webkit-linear-gradient(left,  #ba1f1c 0%,#de4a2f 100%,#de4a2f 100%);
+  background: linear-gradient(to right,  #ba1f1c 0%,#de4a2f 100%,#de4a2f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ba1f1c', endColorstr='#de4a2f',GradientType=1 );
+	max-width: 1366px;
+	margin: 0 auto;
+}
+//Padding main containers
+header#header,
+section#section {
+	padding-left: 40px;
+	padding-right: 40px;
 }
 
 // =============================================================================
@@ -75,271 +100,246 @@ footer {
 // =============================================================================
 
 header {
-  background-image: url(../img/background.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  .div_logo {
-    text-align: center;
-  }
-  .logo {
-    display: block;
-    margin-top: 30px;
-  }
-  .logo img {
-    width: 180px;
-  }
-	.bottom_header {
+	padding-top: 55px;
+	.top_header {
+		background: $red;
+		padding: 35px;
 		display: flex;
 		display: -ms-flexbox;
-		h1 {
-			position: absolute;
-			bottom: 22%;
-			right: 30px;
+		.top_left {
+			width: 50%;
+			a {
+				display: inline-block;
+			}
+		}
+		.top_right {
+			width: 50%;
+			text-align: right;
+			.tel {
+				font-size: 36px;
+
+			}
 		}
 	}
-  h1 {
-    color: $white;
-    font-size: 46px;
-    font-weight: 300;
-    span {
-      font-size: 48px;
-      display: block;
-      font-weight: 900;
-    }
-  }
-  #contact {
-  	padding: 30px 40px;
-  	background-image: url(../img/background-form.jpg);
-		background-color:  $red;
-	  -webkit-background-size: cover;
-	  -moz-background-size: cover;
-	  -o-background-size: cover;
-	  background-size: cover;
-  	font-weight: 300;
-  	font-size: 16px;
-    color: $white;
-    .blk-form {
-      margin-bottom: 10px;
-      label {
-        display: block;
-        padding:0 0 2px 5px;
-        font-size: 17px;
-      }
-    }
-  	input[type=text]{
-  		width: 100%;
-  		padding: 13px 10px;
-  		border: 1px solid $white;
-			color: $white;
-  		background: none;
-  		border-radius: 4px;
-  		display: block;-webkit-transition: all 0.30s ease-in-out;
-		  -moz-transition: all 0.30s ease-in-out;
-		  -ms-transition: all 0.30s ease-in-out;
-		  -o-transition: all 0.30s ease-in-out;
-		  outline: none;
-  	}
-		input[type=text]:focus {
-			box-shadow: 0 0 3px $orange;
-			border: 1px solid $orange;
-		}
-		input[type=text].hightlight {
-			box-shadow: 0 0 3px $orange;
-			border: 1px solid $orange;
-		}
-  	input[type=submit]{
-  		padding: 12px 30px 14px 30px;
-  		border: 0;
-  		background: $light_green;
-      color: $white;
-  		border-radius: 6px;
-  		display: inline-block;
-      cursor: pointer;
-      outline: 0;
-  	}
-		.blk-submit {
-			text-align: right;
-		}
-    .ipt-submit {
-      margin-top: 15px;
-			position: relative;
-			display: inline-block;
-			.spa-loader {
-		    background: $light_green;
-		    border-radius: 6px;
-		    position: absolute;
-		    top: 0;
-		    right: 0;
-		    width: 100%;
-		    height: 100%;
-		    display: none;
-		    z-index: 1;
-		  }
-			.spa-loader-open {
-			  display: block;
-			}
-    }
-		.msg-contact {
-			display: none;
-		}
-    .check_accept {
-      label {
-        font-size: 12px;
-        position: relative;
-        padding-left: 55px;
-      }
-      #accept {
-        visibility: hidden;
-        width: 0;
-        height: 0;
-        margin: 0;
-        padding: 0;
-      }
-    }
-    .switchthree {
-      width: 42px;
-      height: 22px;
-      background: $darkgreen;
-      z-index: 0;
-      margin: 0;
-      padding: 0;
-      appearance: none;
-      border: 1px solid $white;
-      cursor: pointer;
-      position: absolute;
-      top: 7px;
-      left: 0;
-      border-radius: 5px;
-      -moz-border-radius: 5px;
-      -webkit-border-radius: 5px;
-    }
-    .switchthree:after {
-      content: ' ';
-      height: 20px;
-      width: 20px;
-      border-radius: 5px;
-      background: #fff;
-      position: absolute;
-      z-index: 2;
-      top: 0;
-      right: 0;
-      -webkit-transition-duration: .3s;
-      transition-duration: .3s;
-      -webkit-box-shadow: 0 2px 5px #999;
-      box-shadow: 0 2px 5px #999;
-    }
-    .switchthreeOn, .switchthreeOn:before {
-      background: transparent !important;
-    }
-    .switchthreeOn:after {
-      right: 21px !important;
-    }
-  }
-}
-
-// =============================================================================
-// 05. Give your Team
-// =============================================================================
-
-.give_your_team {
-  display: flex;
-	display: -ms-flexbox;
-  .img_give_team {
-    width: 30%;
-		background-image: url(../img/give_your_team.jpg);
+	.banner_top {
+		background-image: url(../img/back-header.jpg);
 		background-repeat: no-repeat;
 		background-position: top center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
+		height: 500px;
+		position:relative;
+		h1 {
+			position: absolute;
+			top: 20%;
+			left: 35px;
+			font-size: 44px;
+		}
+		h2 {
+			position: absolute;
+			bottom: 20%;
+			left: 35px;
+			font-size: 34px;
+			font-weight: 100;
+		}
+	}
+}
+
+// =============================================================================
+// 05. Form
+// =============================================================================
+
+#formstore {
+	background: $white;
+	font-weight: 300;
+	font-size: 16px;
+  color: $orange;
+  .blk-form {
+    margin-bottom: 10px;
+    label {
+      display: block;
+      padding:0 0 2px 5px;
+      font-size: 17px;
+    }
   }
-  .content_give_team {
-    width: 70%;
-    padding: 120px 60px;
-    h2 {
-      color: $red;
-      font-size: 24px;
-      font-weight: 900;
+	input[type=text]{
+		width: 100%;
+		padding: 13px 10px;
+		border: 1px solid $white;
+		background: none;
+		border-radius: 4px;
+		display: block;-webkit-transition: all 0.30s ease-in-out;
+	  -moz-transition: all 0.30s ease-in-out;
+	  -ms-transition: all 0.30s ease-in-out;
+	  -o-transition: all 0.30s ease-in-out;
+	  outline: none;
+	}
+	input[type=text]:focus {
+		box-shadow: 0 0 3px $orange;
+		border: 1px solid $orange;
+	}
+	input[type=text].hightlight {
+		box-shadow: 0 0 3px $orange;
+		border: 1px solid $orange;
+	}
+	.blk-submit {
+		/*text-align: right;*/
+	}
+  .ipt-submit {
+    margin-top: 15px;
+		position: relative;
+		display: inline-block;
+		input[type=submit]{
+			padding: 12px 30px 14px 30px;
+			border: 0;
+			background: $light_green;
+
+			border-radius: 6px;
+			display: inline-block;
+	    cursor: pointer;
+	    outline: 0;
+		}
+		.spa-loader {
+	    background: $light_green;
+	    border-radius: 6px;
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    width: 100%;
+	    height: 100%;
+	    display: none;
+	    z-index: 1;
+	  }
+		.spa-loader-open {
+		  display: block;
+		}
+  }
+	.msg-contact {
+		display: none;
+	}
+	#diploma_pm,
+	#diploma_business,
+	#diploma_marketing,
+	#diploma_ls_man {
+		display: none;
+	}
+  .check_accept {
+    label {
+      font-size: 12px;
+      position: relative;
+      padding-left: 55px;
     }
-    p {
-      color: $red;
-      font-size: 22px;
-      font-weight: 400;
-      margin-bottom: 0;
+    #accept {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+      margin: 0;
+      padding: 0;
     }
+  }
+  .switchthree {
+    width: 42px;
+    height: 22px;
+    background: $darkgreen;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    appearance: none;
+    border: 1px solid $white;
+    cursor: pointer;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  }
+  .switchthree:after {
+    content: ' ';
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    background: #fff;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-box-shadow: 0 2px 5px #999;
+    box-shadow: 0 2px 5px #999;
+  }
+  .switchthreeOn, .switchthreeOn:before {
+    background: transparent !important;
+  }
+  .switchthreeOn:after {
+    right: 21px !important;
   }
 }
 
 // =============================================================================
-// 06. Entamio Education
+// 07. Opportunities Endless
 // =============================================================================
 
-.entamio_education {
-  background: #ba1f1c;
-  background: -moz-linear-gradient(left,  #ba1f1c 0%, #de4a2f 100%, #de4a2f 100%);
-  background: -webkit-linear-gradient(left,  #ba1f1c 0%,#de4a2f 100%,#de4a2f 100%);
-  background: linear-gradient(to right,  #ba1f1c 0%,#de4a2f 100%,#de4a2f 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ba1f1c', endColorstr='#de4a2f',GradientType=1 );
-  .div_entamio {
-    display: flex;
-		display: -ms-flexbox;
-    .content_entamio {
-      background: $white;
-      padding: 40px 30px 80px 30px;
-      width: 65%;
-      h2 {
-        color: $red;
-        font-size: 38px;
-        font-weight: 300;
-        span {
-          font-weight: 700;
-        }
-      }
-      .blks_education {
-        display: flex;
-				display: -ms-flexbox;
-        margin-top: 60px;
-        div {
-          display: block;
-          text-align: center;
-          width: 33.33333%;
-          padding: 5px;
-          span {
-            font-size: 80px;
-            color: $orange;
-            display: block;
-          }
-          h4 {
-            color: $red;
-            font-size: 20px;
-            font-weight: 900;
-            margin: 15px 0 0 0;
-          }
-          p {
-            color: $red;
-            font-size: 18px;
-            font-weight: 400;
-            margin: 0;
-          }
-        }
-      }
-    }
-  .img_entamio {
-	    width: 35%;
-			background-image: url(../img/entamio_education.jpg);
-			background-repeat: no-repeat;
-			background-position: top center;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
-  	}
-  }
+.banner_footer {
+	background-image: url(../img/back-professional.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	height: 500px;
+	position:relative;
+	h2 {
+		position: absolute;
+		top: 10%;
+		right: 35px;
+		font-size: 44px;
+		text-align: right;
+	}
+	a {
+		position: absolute;
+		top: 35%;
+		right: 35px;
+		font-size: 36px;
+		font-weight: 100;
+	}
+}
+
+// =============================================================================
+// 07. Opportunities Endless
+// =============================================================================
+
+.blk_opportunities {
+		padding: 60px 20px;
+		text-align: center;
+		h2 {
+			font-size: 40px;
+		  font-weight: 100;
+			margin-bottom: 30px;
+			span {
+				font-weight: 700;
+			}
+		}
+		.blk_icons {
+			span {
+				font-size: 140px;
+				margin-bottom: 20px;
+				display: block;
+			}
+			h3 {
+				font-size: 32px;
+				font-weight: 700;
+				margin: 0;
+			}
+			p {
+				font-size: 20px;
+				margin: 0;
+			}
+		}
 }
 
 // =============================================================================
@@ -347,42 +347,58 @@ header {
 // =============================================================================
 
 footer {
-  .footer_entamio {
-    background-color: $red;
-    padding: 50px 0;
-    .div_find_out {
-      display: block;
-      text-align: right;
-      margin-bottom: 20px;
-    }
-    .find_out {
-      padding: 12px 35px 14px 35px;
-  		background: $light_green;
-  		border-radius: 8px;
-  		display: inline-block;
-      color: $white;
-      font-size: 20px;
-      font-weight: 300;
-    }
-    h3 {
-      font-size: 30px;
-      font-weight: 300;
-      text-align: right;
-      color: $white;
-      span {
-        font-weight: 900;
-      }
-    }
-  }
-  .footer_strategy {
-    background-color: $black;
-    padding: 30px 0;
-    text-align: center;
-    color: $grey;
-    p {
-      margin: 10px 0 0 0;
-    }
-  }
+	background-color: $red;
+	.bottom_footer {
+		padding: 40px;
+		display: flex;
+		display: -ms-flexbox;
+		.blk_footer_entamio {
+
+		}
+		.blk_footer_content {
+			font-size: 18px;
+			font-weight: 400;
+			padding: 0 10px 0 20px;
+			p {
+				margin: 0;
+			}
+		}
+		.blk_footer_icon {
+			padding: 0 20px 0 10px;
+			a {
+				display: inline-block;
+				margin: 0 7px;
+				span{
+					font-size: 42px;
+				}
+			}
+		}
+		.blk_footer_nrt {
+
+		}
+	}
+	.back_white {
+		background: $white;
+		color: $orange;
+		.col-sm-12 {
+			display: flex;
+			display: -ms-flexbox;
+		}
+		h4 {
+			font-size: 18px;
+			font-weight: 400;
+		}
+		.left_copy {
+			width: 50%;
+			padding: 30px 40px;
+
+		}
+		.right_copy{
+			width: 50%;
+			padding: 30px 40px;
+			text-align: right;
+		}
+	}
 }
 
 // =============================================================================
@@ -391,228 +407,19 @@ footer {
 
 @media only screen and (max-width: 1200px) {
 
-	/** Header **/
-	header {
-		.bottom_header {
-			h1 {
-		    font-size: 36px;
-				span {
-		      font-size: 36px;
-		    }
-			}
-		}
-	}
-	/** Give your Team **/
-	.give_your_team {
-		.img_give_team {
-			width: 40%;
-		}
-		.content_give_team {
-			width: 60%;
-		}
-	}
-	/** Entamio **/
-	.entamio_education {
-		.div_entamio {
-			.img_entamio {
-				width: 40%;
-			}
-			.content_entamio {
-				width: 60%;
-	      .blks_education {
-	        div {
-	          h4 {
-	            font-size: 20px;
-							min-height: 56px;
-	          }
-	          p {
-	            font-size: 16px;
-	          }
-	        }
-	      }
-			}
-		}
-	}
-	/** Footer **/
-	footer {
-		.footer_entamio {
-			.div_find_out {
-			}
-			h3 {
-				font-size: 26px;
-			}
-		}
-	}
+
 
 }
 
 @media only screen and (max-width: 992px) {
 
-	/** Header **/
-	header {
-		.bottom_header {
-			display: block;
-			h1 {
-				position: inherit;;
-				bottom: 0;
-				right: 0;
-		    font-size: 38px;
-				text-align: center;
-				padding-top: 30px;
-				span {
-		      font-size: 40px;
-		    }
-			}
-		}
-	}
-	/** Give your Team **/
-	.give_your_team {
-		.img_give_team {
-			width: 50%;
-		}
-		.content_give_team {
-			width: 50%;
-			padding: 100px 40px;
-			h2 {
-				font-size: 22px;
-			}
-			p {
-				font-size: 16px;
-			}
-		}
-	}
-	/** Entamio **/
-	.entamio_education {
-		.div_entamio {
-			display: block;
-			.img_entamio {
-				width: 100%;
-				height: 500px;
-			}
-			.content_entamio {
-				width: 100%;
-				h2 {
-					font-size: 34px;
-				}
-	      .blks_education {
-	        div {
-	          span {
-	            font-size: 70px;
-	          }
-	          h4 {
-	            font-size: 20px;
-							min-height: inherit;
-	          }
-	          p {
-	            font-size: 16px;
-	          }
-	        }
-	      }
-			}
-		}
-	}
-	/** Footer **/
-	footer {
-		.footer_entamio {
-			text-align: center;
-			.div_find_out {
-				margin: 20px 0 25px 0;
-				text-align: center;
-			}
-			h3 {
-				text-align: center;
-			}
-		}
-	}
+
 
 }
 
 @media only screen and (max-width: 767px) {
 
-	/** Header **/
-	header {
-		.bottom_header {
-			h1 {
-		    font-size: 28px;
-				padding-top: 30px;
-				span {
-		      font-size: 27px;
-		    }
-			}
-		}
-		#contact {
-	  	padding: 20px;
-			input[type=text] {
-				padding: 10px;
-			}
-		}
-	}
-	/** Give your Team **/
-	.give_your_team {
-		display: block;
-		.img_give_team{
-			width: 100%;
-			height: 300px;
-		}
-		.content_give_team {
-			width: 100%;
-			padding: 60px 40px;
-			h2 {
-				font-size: 22px;
-			}
-			p {
-				font-size: 16px;
-			}
-		}
-	}
-	/** Entamio **/
-	.entamio_education {
-		.div_entamio {
-			display: block;
-			.img_entamio {
-				width: 100%;
-				height: 300px;
-			}
-			.content_entamio {
-				width: 100%;
-				padding: 30px 20px;
-				h2 {
-					font-size: 34px;
-				}
-	      .blks_education {
-					display: block;
-					margin-top: 20px;
-	        div {
-						width: 100%;
-						margin: 10px 0;
-	          span {
-	            font-size: 80px;
-	          }
-	          h4 {
-	            font-size: 20px;
-							margin-top: 5px;
-	          }
-	          p {
-	            font-size: 16px;
-	          }
-	        }
-	      }
-			}
-		}
-	}
-	/** Footer **/
-	footer {
-		.footer_entamio {
-			text-align: center;
-			.div_find_out {
-				margin: 20px 0 25px 0;
-			}
-			h3 {
-				text-align: center;
-				font-size: 22px;
-			}
-		}
-	}
+
 
 }
 
