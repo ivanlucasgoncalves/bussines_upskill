@@ -1,53 +1,73 @@
-	<form id="formstore" action="email.php" method="post">
+<?php
+	$most_enjoy = ( isset($_POST['most_enjoy']) ) ? $_POST['most_enjoy'] : false;
+	$want_improve = ( isset($_POST['want_improve']) ) ? $_POST['want_improve'] : false;
+	$want_to = ( isset($_POST['want_to']) ) ? $_POST['want_to'] : false; ?>
 
-		<legend>I most enjoy</legend>
-		<input type="radio" name="most_enjoy" id="being_operational" value="being_operational"><label for="being_operational">Being operational</label><br>
-		<input type="radio" name="most_enjoy" id="being_leader" value="being_leader"><label for="being_leader">Being a leader</label><br>
-		<input type="radio" name="most_enjoy" id="being_creative" value="being_creative"><label for="being_creative">Being creative</label><br>
-		<input type="radio" name="most_enjoy" id="being_organised" value="being_organised"><label for="being_organised">Being organised</label><br>
-
-		<legend>I want to improve</legend>
-		<input type="radio" name="want_improve" id="experience" value="experience"><label for="experience">Experience</label><br>
-		<input type="radio" name="want_improve" id="working_people" value="working_people"><label for="working_people">Working with people</label><br>
-		<input type="radio" name="want_improve" id="time_management" value="time_management"><label for="time_management">Time management</label><br>
-		<input type="radio" name="want_improve" id="problem_solving" value="problem_solving"><label for="problem_solving">Problem solving</label><br>
-
-		<legend>I want to...</legend>
-		<input type="radio" name="want_to" id="clarify_goals" value="clarify_goals"><label for="clarify_goals">Clarify my business goals</label><br>
-		<input type="radio" name="want_to" id="support_individuals" value="support_individuals"><label for="support_individuals">Support individuals in a team</label><br>
-		<input type="radio" name="want_to" id="embrance_criativity" value="embrance_criativity"><label for="embrance_criativity">Embrance my creativity</label><br>
-		<input type="radio" name="want_to" id="master_project" value="master_project"><label for="master_project">Master project based work across any industry</label><br>
-
-		<!--/* Diplomas -->
-		<div id="diploma_pm">Diploma of Project Management</div>
-		<div id="diploma_business">Diploma of Business</div>
-		<div id="diploma_marketing">Diploma of Marketing</div>
-		<div id="diploma_ls_man">Diploma of Leadership & Management</div>
-
-		<!--/* Form -->
-		<label for="name">Name</label>
-		<input type="text" id="name" name="name">
-		<label for="email">Email</label>
-		<input type="text" id="email" name="email">
-		<label for="phone">Phone</label>
-		<input type="text" id="phone" name="phone">
-		<div class="check_accept">
-			<label for="accept">
-				I accept that I will be contacted by an Entamio representative with the purpose of discussing education options, coaching and/or career planning.
-				<input type="checkbox" class="checkbox" id="accept" name="accept">
-				<div class="switchthree switchthreeOn"></div>
-			</label>
+<form id="formideal" action="email.php" method="post">
+	<div id="formstore">
+		<div class="blk_most_enjoy">
+			<h2>Find your ideal course:</h2>
+				<legend>I most enjoy</legend>
+				<label class="radio"><input type="radio" name="most_enjoy" id="being_operational" value="Diploma of Business"><span class="outer"><span class="inner"></span></span>Being operational</label>
+				<label class="radio"><input type="radio" name="most_enjoy" id="being_leader" value="Diploma of Leadership & Management"><span class="outer"><span class="inner"></span></span>Being a leader</label>
+				<label class="radio"><input type="radio" name="most_enjoy" id="being_creative" value="Diploma of Marketing"><span class="outer"><span class="inner"></span></span>Being creative</label>
+				<label class="radio"><input type="radio" name="most_enjoy" id="being_organised" value="Diploma of Project Management"><span class="outer"><span class="inner"></span></span>Being organised</label>
 		</div>
-		<div class="blk-submit">
-			<div class="ipt-submit">
-				<span class="spa-loader">
-					<div class="la-ball-clip-rotate la-sm">
-						<div></div>
+		<div class="blk_want_improve">
+			<h2>Find your ideal course:</h2>
+				<legend>I want to improve</legend>
+				<label class="radio"><input type="radio" name="want_improve" id="experience" value="Diploma of Business"><span class="outer"><span class="inner"></span></span>Experience</label>
+				<label class="radio"><input type="radio" name="want_improve" id="working_people" value="Diploma of Leadership & Management"><span class="outer"><span class="inner"></span></span>Working with people</label>
+				<label class="radio"><input type="radio" name="want_improve" id="time_management" value="Diploma of Project Management"><span class="outer"><span class="inner"></span></span>Time management</label>
+				<label class="radio"><input type="radio" name="want_improve" id="problem_solving" value="Diploma of Marketing"><span class="outer"><span class="inner"></span></span>Problem solving</label>
+		</div>
+		<div class="blk_want_to">
+			<h2>Find your ideal course:</h2>
+				<legend>I want to...</legend>
+				<label class="radio"><input type="radio" name="want_to" id="clarify_goals" value="Diploma of Business"><span class="outer"><span class="inner"></span></span>Clarify my business goals</label>
+				<label class="radio"><input type="radio" name="want_to" id="support_individuals" value="Diploma of Leadership & Management"><span class="outer"><span class="inner"></span></span>Support individuals in a team</label>
+				<label class="radio"><input type="radio" name="want_to" id="embrance_criativity" value="Diploma of Marketing"><span class="outer"><span class="inner"></span></span>Embrance my creativity</label>
+				<label class="radio"><input type="radio" name="want_to" id="master_project" value="Diploma of Project Management"><span class="outer"><span class="inner"></span></span>Master project based work across any industry</label>
+		</div>
+		<div class="blk_main_form">
+			<h3>Congratulations!</h3>
+			<div class="ideal_for_you">
+				<h4>Ideal for you:</h4>
+				<!--/* Diplomas -->
+				<div class="blk_diplomas">
+					<div id="diploma_pm">Diploma of Project Management</div>
+					<div id="diploma_business">Diploma of Business</div>
+					<div id="diploma_marketing">Diploma of Marketing</div>
+					<div id="diploma_ls_man">Diploma of Leadership & Management</div>
+				</div>
+			</div>
+			<!--/* Form -->
+			<label for="name">Name</label>
+			<input type="text" id="name" name="name">
+			<label for="email">Email</label>
+			<input type="text" id="email" name="email">
+			<label for="phone">Phone</label>
+			<input type="text" id="phone" name="phone">
+			<div class="check_accept">
+				<label class="ip_check">
+					<input type="checkbox" class="checkbox" id="accept" name="accept">
+					<span class="outer"><span class="inner"></span></span>I accept that I will be contacted by an Entamio representative with the purpose of discussing education options, coaching and/or career planning.
+				</label>
+				<div class="blk-submit">
+					<div class="ipt-submit">
+						<span class="spa-loader">
+							<div class="la-ball-clip-rotate">
+								<div></div>
+							</div>
+						</span>
+						<input type="submit" value="Upskil." name="submit" id="submit">
 					</div>
-				</span>
-				<input type="submit" value="submit" name="submit" id="submit">
+				</div>
 			</div>
 		</div>
-		<div class="msg-contact">We are going to keep in touch soon. Thank you!!</div>
-		<input type="button" value="localStorageTest" name="localStorageTest" id="localStorageTest">
-	</form>
+		<div class="msg_contact">
+			<h2>Thank you for your enquiry with Entamio Education Group.</h2>
+			<h2>One of our friendly team members will be in touch shortly.</h2>
+		</div>
+	</div>
+</form>

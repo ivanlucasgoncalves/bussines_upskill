@@ -5,8 +5,8 @@
 // 02. Fonts
 // 03. Main Style
 // 04. Header
-// 05. Form
-// 06.
+// 05. Find your ideal
+// 06. Form
 // 07. Footer
 // 08. Responsive
 // =============================================================================
@@ -148,134 +148,287 @@ header {
 }
 
 // =============================================================================
-// 05. Form
+// 05. Find your ideal
 // =============================================================================
 
-#formstore {
-	background: $white;
-	font-weight: 300;
-	font-size: 16px;
-  color: $orange;
-  .blk-form {
-    margin-bottom: 10px;
-    label {
-      display: block;
-      padding:0 0 2px 5px;
-      font-size: 17px;
-    }
-  }
-	input[type=text]{
-		width: 100%;
-		padding: 13px 10px;
-		border: 1px solid $white;
-		background: none;
-		border-radius: 4px;
-		display: block;-webkit-transition: all 0.30s ease-in-out;
-	  -moz-transition: all 0.30s ease-in-out;
-	  -ms-transition: all 0.30s ease-in-out;
-	  -o-transition: all 0.30s ease-in-out;
-	  outline: none;
-	}
-	input[type=text]:focus {
-		box-shadow: 0 0 3px $orange;
-		border: 1px solid $orange;
-	}
-	input[type=text].hightlight {
-		box-shadow: 0 0 3px $orange;
-		border: 1px solid $orange;
-	}
-	.blk-submit {
-		/*text-align: right;*/
-	}
-  .ipt-submit {
-    margin-top: 15px;
-		position: relative;
-		display: inline-block;
-		input[type=submit]{
-			padding: 12px 30px 14px 30px;
-			border: 0;
-			background: $light_green;
-
-			border-radius: 6px;
-			display: inline-block;
-	    cursor: pointer;
-	    outline: 0;
-		}
-		.spa-loader {
-	    background: $light_green;
-	    border-radius: 6px;
-	    position: absolute;
-	    top: 0;
-	    right: 0;
-	    width: 100%;
-	    height: 100%;
-	    display: none;
-	    z-index: 1;
-	  }
-		.spa-loader-open {
-		  display: block;
-		}
-  }
-	.msg-contact {
-		display: none;
-	}
-	#diploma_pm,
-	#diploma_business,
-	#diploma_marketing,
-	#diploma_ls_man {
-		display: none;
-	}
-  .check_accept {
-    label {
-      font-size: 12px;
-      position: relative;
-      padding-left: 55px;
-    }
-    #accept {
-      visibility: hidden;
-      width: 0;
-      height: 0;
-      margin: 0;
-      padding: 0;
-    }
-  }
-  .switchthree {
-    width: 42px;
-    height: 22px;
-    background: $darkgreen;
-    z-index: 0;
-    margin: 0;
-    padding: 0;
-    appearance: none;
-    border: 1px solid $white;
-    cursor: pointer;
+.find_your_ideal {
+  background: $white;
+  display: flex;
+  display: -ms-flexbox;
+  padding: 20px 0;
+  position: relative;
+  .bk_left {
+    background-image: url(../img/back-form-left.jpg);
+  	background-repeat: no-repeat;
+  	background-position: top right;
+    -webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
     position: absolute;
-    top: 7px;
+    top: 0;
     left: 0;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+    width: 20%;
+    height: 100%;
+    opacity: 0.3;
   }
-  .switchthree:after {
-    content: ' ';
-    height: 20px;
-    width: 20px;
-    border-radius: 5px;
-    background: #fff;
+  .bk_right {
+    background-image: url(../img/back-form-right.jpg);
+  	background-repeat: no-repeat;
+  	background-position: top left;
+    -webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
     position: absolute;
-    z-index: 2;
     top: 0;
     right: 0;
-    -webkit-transition-duration: .3s;
-    transition-duration: .3s;
-    -webkit-box-shadow: 0 2px 5px #999;
-    box-shadow: 0 2px 5px #999;
+    width: 20%;
+    height: 100%;
+    opacity: 0.3;
   }
-  .switchthreeOn, .switchthreeOn:before {
-    background: transparent !important;
+}
+
+// =============================================================================
+// 06. Form
+// =============================================================================
+
+.blk_form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 30px;
+  position: relative;
+  z-index: 1;
+  //Style contents
+  .blk_most_enjoy,
+  .blk_want_improve,
+  .blk_want_to {
+    text-align: center;
   }
-  .switchthreeOn:after {
-    right: 21px !important;
+  //Display none contents and appear only there is a click on radio buttons
+  .blk_want_improve,
+  .blk_want_to,
+  .blk_main_form,
+  .msg_contact {
+    display: none;
+  }
+  .blk_main_form {
+    font-size: 30px;
+    padding: 10px 20px;
+    font-weight: 400;
+    .ideal_for_you {
+      display: flex;
+      display: -ms-flexbox;
+      margin: 40px 0;
+      h4 {
+        width: 17%;
+        font-weight: 400;
+      }
+      .blk_diplomas {
+        display: block;
+        width: 83%;
+      }
+    }
+  }
+  h2 {
+    color: $red;
+  }
+  #formstore {
+  	font-size: 16px;
+    color: $orange;
+    legend {
+      display: block;
+      width: 100%;
+      font-size: 62px;
+      font-weight: 900;
+      margin: 35px 0;
+    }
+    .radio {
+      display: flex;
+      display: -ms-flexbox;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 48px;
+      cursor: pointer;
+      margin-bottom: 35px;
+    }
+    .radio:hover .inner {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+    .radio input {
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+    .radio input:focus + .outer .inner {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+      background-color: $orange;
+    }
+    .radio .outer {
+      display: block;
+      margin: 10px 15px 10px 10px;
+      padding: 3px;
+      border: 1px solid $orange;
+      border-radius: 50%;
+      background-color: $white;
+    }
+    .radio .inner {
+      -webkit-transition: all 0.25s ease-in-out;
+      transition: all 0.25s ease-in-out;
+      width: 16px;
+      height: 16px;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+      display: block;
+      margin: 2px;
+      border-radius: 50%;
+      background-color: $orange;
+      opacity: 0;
+    }
+  	input[type=text]{
+  		width: 100%;
+  		padding: 10px;
+      margin-bottom: 30px;
+      border: 0;
+  		border-bottom: 1px solid $orange;
+  		background: none;
+  		display: block;-webkit-transition: all 0.30s ease-in-out;
+  	  -moz-transition: all 0.30s ease-in-out;
+  	  -ms-transition: all 0.30s ease-in-out;
+  	  -o-transition: all 0.30s ease-in-out;
+  	  outline: none;
+  	}
+  	input[type=text]:focus {
+      border: 0;
+  		border-bottom: 1px solid $orange;
+  	}
+  	input[type=text].hightlight {
+      border: 0;
+  		border-bottom: 2px solid $red;
+  	}
+    .ipt-submit {
+  		position: relative;
+  		display: inline-block;
+  		input[type=submit] {
+        background: none;
+        color: $red;
+        border: 0;
+  			border-bottom: 1px solid $red;
+        font-size: 36px;
+  			display: inline-block;
+  	    cursor: pointer;
+  	    outline: 0;
+  		}
+  		.spa-loader {
+  	    border-radius: 6px;
+  	    position: absolute;
+  	    top: 0;
+  	    right: 0;
+  	    width: 100%;
+  	    height: 100%;
+  	    display: none;
+  	    z-index: 1;
+  	  }
+  		.spa-loader-open {
+  		  display: block;
+  		}
+    }
+    .hidden-ipt {
+      #submit {
+        visibility: hidden;
+      }
+    }
+  	#diploma_pm,
+  	#diploma_business,
+  	#diploma_marketing,
+  	#diploma_ls_man {
+  		display: none;
+  	}
+    .check_accept {
+      display: flex;
+      display: -ms-flexbox;
+      margin-top: 50px;
+      .ip_check {
+        display: flex;
+        display: -ms-flexbox;
+        font-size: 20px;
+        cursor: pointer;
+        margin-right: 25px;
+      }
+      .ip_check:hover .inner {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+      }
+      .ip_check input {
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+      }
+      .ip_check input:checked + .outer {
+          border: 1px solid $orange;
+      }
+      .ip_check input:checked + .outer .inner {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+      }
+      .ip_check input:focus + .outer .inner {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+        background-color: $orange;
+      }
+      .ip_check .outer {
+        display: block;
+        margin: 10px 15px 10px 0;
+        padding: 3px;
+        border: 1px solid $orange;
+        border-radius: 50%;
+        background-color: $white;
+      }
+      .ip_check .inner {
+        -webkit-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+        width: 16px;
+        height: 16px;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        display: block;
+        margin: 2px;
+        border-radius: 50%;
+        background-color: $orange;
+        opacity: 0;
+      }
+      #accept {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .msg_contact {
+      text-align: center;
+      h2 {
+        font-size: 50px;
+        margin: 25px 0;
+        padding: 50px;
+      }
+    }
   }
 }
 

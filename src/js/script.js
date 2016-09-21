@@ -4,65 +4,59 @@
 
 jQuery(function ($) {
 
-  $('#localStorageTest').click(function() {
-      localStorage.clear();
-  });
-
   Formstore();
 
-
   function Formstore() {
-
-    /*Checkbox - Accept*/
-    $('.checkbox').change(function() {
-      $(".switchthree").toggleClass("switchthreeOn");
-    });
 
     //Fill the fields on localStorage
     $('input[name="most_enjoy"]').change(function () {
         localStorage[$(this).attr('name')] = $(this).val();
+        $('.blk_most_enjoy').css('display','none');
+        $('.blk_want_improve').css('display','block');
     });
     $('input[name="want_improve"]').change(function () {
         localStorage[$(this).attr('name')] = $(this).val();
+        $('.blk_want_improve').css('display','none');
+        $('.blk_want_to').css('display','block');
     });
     $('input[name="want_to"]').change(function () {
         localStorage[$(this).attr('name')] = $(this).val();
+        $('.blk_want_to').css('display','none');
+        $('.blk_main_form').css('display','block');
     });
 
-    //Diploma of Project Management
-    if (localStorage["most_enjoy"] == 'being_organised' || localStorage["want_improve"] == 'time_management' || localStorage["want_to"] == 'master_project') {
-      $('#diploma_pm').css('display','block');
-    }
-    //Diploma of Business
-    if (localStorage["most_enjoy"] == 'being_operational' || localStorage["want_improve"] == 'experience' || localStorage["want_to"] == 'clarify_goals') {
-      //$('input[name="most_enjoy"]').val(localStorage["most_enjoy"]);
-      $('#diploma_business').css('display','block');
-    }
-    //Diploma of Marketing
-    if (localStorage["most_enjoy"] == 'being_creative' || localStorage["want_improve"] == 'problem_solving' || localStorage["want_to"] == 'embrance_criativity') {
-      $('#diploma_marketing').css('display','block');
-    }
-    //Diploma of Leadership & Management
-    if (localStorage["most_enjoy"] == 'being_leader' || localStorage["want_improve"] == 'working_people' || localStorage["want_to"] == 'support_individuals') {
-      $('#diploma_ls_man').css('display','block');
-    }
+    $('input[type="radio"]').change(function () {
+      //Diploma of Project Management
+      if (localStorage["most_enjoy"] == 'Diploma of Project Management' || localStorage["want_improve"] == 'Diploma of Project Management' || localStorage["want_to"] == 'Diploma of Project Management') {
+        $('#diploma_pm').css('display','block');
+      }
+      //Diploma of Business
+      if (localStorage["most_enjoy"] == 'Diploma of Business' || localStorage["want_improve"] == 'Diploma of Business' || localStorage["want_to"] == 'Diploma of Business') {
+        //$('input[name="most_enjoy"]').val(localStorage["most_enjoy"]);
+        $('#diploma_business').css('display','block');
+      }
+      //Diploma of Marketing
+      if (localStorage["most_enjoy"] == 'Diploma of Marketing' || localStorage["want_improve"] == 'Diploma of Marketing' || localStorage["want_to"] == 'Diploma of Marketing') {
+        $('#diploma_marketing').css('display','block');
+      }
+      //Diploma of Leadership & Management
+      if (localStorage["most_enjoy"] == 'Diploma of Leadership & Management' || localStorage["want_improve"] == 'Diploma of Leadership & Management' || localStorage["want_to"] == 'Diploma of Leadership & Management') {
+        $('#diploma_ls_man').css('display','block');
+      }
+    });
 
-
-    /*$('#formstore').submit(function (FormStore) {
+    $('#submit').click(function () {
 
       //Get the data from all the fields
-      var company = $('#company').val();
       var name = $('#name').val();
       var email = $('#email').val();
       var phone = $('#phone').val();
+      var most_enjoy = localStorage.getItem('most_enjoy');
+      var want_improve = localStorage.getItem('want_improve');
+      var want_to = localStorage.getItem('want_to');
 
       //Simple validation to make sure user entered something
       //If error found, add hightlight class to the text field
-      if (company =='') {
-        $('#company').addClass('hightlight');
-        return false;
-      } else $('#company').removeClass('hightlight');
-
       if (name =='') {
         $('#name').addClass('hightlight');
         return false;
@@ -85,24 +79,28 @@ jQuery(function ($) {
           if($(this).is(':checked')){
 
             //organize the data properly
-            var dataString = 'company=' + company + '&name=' + name + '&email=' + email + '&phone=' + phone;
+            var dataString = '&name=' + name + '&email=' + email + '&phone=' + phone + '&most_enjoy=' + most_enjoy + '&want_improve=' + want_improve + '&want_to=' + want_to;
+            //alert(dataString);
 
             //show the loading sign
         		$('.spa-loader').addClass('spa-loader-open');
+            $('.ipt-submit').addClass('hidden-ipt');
 
             //start the ajax
             $.ajax({
               type: "POST",
               url: "email.php",
-              data: $('#contact').serialize(),
+              data: $('#formideal').serialize(),
               dataType: 'json',
               complete: function(r) {
                 // We have a OK
-                document.getElementById('contact').reset();
-                $('.msg-contact').css( "display", "block" );
-                $(".switchthree").addClass("switchthreeOn");
+                document.getElementById('formideal').reset();
                 $('.spa-loader').removeClass('spa-loader-open');
-                ga('send','event','EDM','Strategy One');
+                $('.ipt-submit').removeClass('hidden-ipt');
+                $('.blk_main_form').css('display','none');
+                $('.msg_contact').css('display','block');
+                localStorage.clear();
+                //ga('send','event','EDM','Strategy One');
               }
             });
           } else {
@@ -112,9 +110,8 @@ jQuery(function ($) {
       });
       //cancel the submit button default behaviours
       return false;
-    });*/
+    });
 
   }
-
 
 });

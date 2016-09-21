@@ -1,13 +1,19 @@
 <?php
-	// Include header file
-	include('header.php'); ?>
+// Include header file
+include('header.php'); ?>
 
 	<section id="section">
 		<div class="row">
 			<div class="col-md-12">
-				<?php
-					// Include form file
-					include('form.php'); ?>
+				<div class="find_your_ideal">
+					<div class="bk_left"></div>
+					<div class="blk_form">						
+						<?php
+						// Include form file
+						include('form.php'); ?>
+					</div>
+					<div class="bk_right"></div>
+				</div>
 			</div>
 		</div>
 		<div class="row">
@@ -45,5 +51,5 @@
 	</section>
 
 <?php
-	// Include footer file
-	include 'footer.php'; ?>
+// Include footer file
+include 'footer.php'; ?>
