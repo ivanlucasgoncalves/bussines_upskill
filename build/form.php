@@ -1,33 +1,42 @@
-<?php
-	$most_enjoy = ( isset($_POST['most_enjoy']) ) ? $_POST['most_enjoy'] : false;
-	$want_improve = ( isset($_POST['want_improve']) ) ? $_POST['want_improve'] : false;
-	$want_to = ( isset($_POST['want_to']) ) ? $_POST['want_to'] : false; ?>
 
-<form id="formideal" action="email.php" method="post">
+<form id="formideal" class="ac-custom ac-radio ac-fill" autocomplete="off" action="email.php" method="post">
 	<div id="formstore">
 		<div class="blk_most_enjoy">
-			<h2>Find your ideal course:</h2>
-				<legend>I most enjoy</legend>
-				<label class="radio"><input type="radio" name="most_enjoy" id="being_operational" value="Diploma of Business"><span class="outer"><span class="inner"></span></span>Being operational</label>
-				<label class="radio"><input type="radio" name="most_enjoy" id="being_leader" value="Diploma of Leadership & Management"><span class="outer"><span class="inner"></span></span>Being a leader</label>
-				<label class="radio"><input type="radio" name="most_enjoy" id="being_creative" value="Diploma of Marketing"><span class="outer"><span class="inner"></span></span>Being creative</label>
-				<label class="radio"><input type="radio" name="most_enjoy" id="being_organised" value="Diploma of Project Management"><span class="outer"><span class="inner"></span></span>Being organised</label>
+			<h2 class="title_steps">I most enjoy...</h2>
+			<ul>
+				<li><input type="radio" name="most_enjoy" id="being_operational" value="Diploma of Business"><label for="being_operational">Being operational</label></li>
+				<li><input type="radio" name="most_enjoy" id="being_leader" value="Diploma of Leadership & Management"><label for="being_leader">Being a leader</label></li>
+				<li><input type="radio" name="most_enjoy" id="being_creative" value="Diploma of Marketing"><label for="being_creative">Being creative</label></li>
+				<li><input type="radio" name="most_enjoy" id="being_organised" value="Diploma of Project Management"><label for="being_organised">Being organised</label></li>
+			</ul>
 		</div>
 		<div class="blk_want_improve">
-			<h2>Find your ideal course:</h2>
-				<legend>I want to improve</legend>
-				<label class="radio"><input type="radio" name="want_improve" id="experience" value="Diploma of Business"><span class="outer"><span class="inner"></span></span>Experience</label>
-				<label class="radio"><input type="radio" name="want_improve" id="working_people" value="Diploma of Leadership & Management"><span class="outer"><span class="inner"></span></span>Working with people</label>
-				<label class="radio"><input type="radio" name="want_improve" id="time_management" value="Diploma of Project Management"><span class="outer"><span class="inner"></span></span>Time management</label>
-				<label class="radio"><input type="radio" name="want_improve" id="problem_solving" value="Diploma of Marketing"><span class="outer"><span class="inner"></span></span>Problem solving</label>
+			<h2 class="title_steps">I want to improve...</h2>
+			<ul>
+				<li><input type="radio" name="want_improve" id="experience" value="Diploma of Business"><label for="experience">My experience</label></li>
+				<li><input type="radio" name="want_improve" id="working_people" value="Diploma of Leadership & Management"><label for="working_people">Team work</label></li>
+				<li><input type="radio" name="want_improve" id="time_management" value="Diploma of Project Management"><label for="time_management">Time management</label></li>
+				<li><input type="radio" name="want_improve" id="problem_solving" value="Diploma of Marketing"><label for="problem_solving">Problem solving</label></li>
+			</ul>
 		</div>
 		<div class="blk_want_to">
-			<h2>Find your ideal course:</h2>
-				<legend>I want to...</legend>
-				<label class="radio"><input type="radio" name="want_to" id="clarify_goals" value="Diploma of Business"><span class="outer"><span class="inner"></span></span>Clarify my business goals</label>
-				<label class="radio"><input type="radio" name="want_to" id="support_individuals" value="Diploma of Leadership & Management"><span class="outer"><span class="inner"></span></span>Support individuals in a team</label>
-				<label class="radio"><input type="radio" name="want_to" id="embrance_criativity" value="Diploma of Marketing"><span class="outer"><span class="inner"></span></span>Embrance my creativity</label>
-				<label class="radio"><input type="radio" name="want_to" id="master_project" value="Diploma of Project Management"><span class="outer"><span class="inner"></span></span>Master project based work across any industry</label>
+			<h2 class="title_steps">I want to...</h2>
+			<ul>
+				<li><input type="radio" name="want_to" id="clarify_goals" value="Diploma of Business"><label for="clarify_goals">Clarify my business goals</label></li>
+				<li><input type="radio" name="want_to" id="support_individuals" value="Diploma of Leadership & Management"><label for="support_individuals">Support individuals in a team</label></li>
+				<li><input type="radio" name="want_to" id="embrance_criativity" value="Diploma of Marketing"><label for="embrance_criativity">Embrace my creativity</label></li>
+				<li><input type="radio" name="want_to" id="master_project" value="Diploma of Project Management"><label for="master_project">Master project-based work across industries</label></li>
+			</ul>
+		</div>
+		<div class="progressive_bar">
+			<div class="line">
+				<div class="progress"></div>
+			</div>
+			<ol>
+				<li>1. Step one</li>
+				<li>2. Step two</li>
+				<li>3. Step three</li>
+			</ol>
 		</div>
 		<div class="blk_main_form">
 			<h3>Congratulations!</h3>
@@ -53,15 +62,15 @@
 					<input type="checkbox" class="checkbox" id="accept" name="accept">
 					<span class="outer"><span class="inner"></span></span>I accept that I will be contacted by an Entamio representative with the purpose of discussing education options, coaching and/or career planning.
 				</label>
-				<div class="blk-submit">
-					<div class="ipt-submit">
-						<span class="spa-loader">
-							<div class="la-ball-clip-rotate">
-								<div></div>
-							</div>
-						</span>
-						<input type="submit" value="Upskil." name="submit" id="submit">
-					</div>
+			</div>
+			<div class="blk-submit">
+				<div class="ipt-submit">
+					<span class="spa-loader">
+						<div class="la-ball-clip-rotate">
+							<div></div>
+						</div>
+					</span>
+					<input type="submit" value="Upskill." name="submit" id="submit">
 				</div>
 			</div>
 		</div>

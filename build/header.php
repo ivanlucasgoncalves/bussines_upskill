@@ -36,7 +36,7 @@
 					<div class="col-md-12">
 						<div class="banner_top">
 							<h1>When one door closes, <br/>another opens...</h1>
-							<h2>Get where you want to go, <br/>upskill with Entamio.</h2>
+							<h2>Quickly complete the form below <br/>& find your ideal qualification.</h2>
 						</div>
 					</div>
 				</div>

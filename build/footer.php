@@ -48,6 +48,8 @@
 	</footer>
 </div> <!--/* Wrapper -->
 <script src="inc/js/script.min.js"></script>
+<script src="inc/js/modernizr.custom.js"></script>
+<script src="inc/js/svgcheckbx.js"></script>
 <?php if(getenv('DEV_IP')) : ?>
 	<script src="//<?= getenv('DEV_IP') ?>:35729/livereload.js"></script>
 <?php endif; ?>
