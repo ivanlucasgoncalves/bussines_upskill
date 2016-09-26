@@ -19,10 +19,10 @@
 								<p>E: <a href="mailto:admissions@entamio.com">admissions@entamio.com</a></p>
 							</div>
 							<div class="blk_footer_icon">
-								<a href=""><span class="icon-linkedin2"></span></a>
-								<a href=""><span class="icon-facebook2"></span></a>
-								<a href=""><span class="icon-twitter"></span></a>
-								<a href=""><span class="icon-google-plus"></span></a>
+								<a href="https://www.linkedin.com/company/t3-australia-pty-ltd?trk=tyah&trkInfo=idx2-1-2tarId1423440095247tasentamio" target="_blank"><span class="icon-linkedin2"></span></a>
+								<a href="https://www.facebook.com/entamio" target="_blank"><span class="icon-facebook2"></span></a>
+								<a href="https://twitter.com/entamio" target="_blank"><span class="icon-twitter"></span></a>
+								<a href="https://plus.google.com/u/0/+EntamioEducationGroup/videos" target="_blank"><span class="icon-google-plus"></span></a>
 							</div>
 							<div class="blk_footer_nrt">
 								<a class="logo_nrt" href="/">
