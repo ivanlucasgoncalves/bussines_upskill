@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>EduSales</title>
+	<title>EduSales Entamio</title>
 	<meta name="description" content="">
 
 	<meta charset="UTF-8">

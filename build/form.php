@@ -1,5 +1,5 @@
 
-<form id="formideal" class="ac-custom ac-radio ac-fill" autocomplete="off" action="email.php" method="post">
+<form id="formideal" class="ac-custom ac-radio ac-fill ac-checkbox ac-boxfill" autocomplete="off" action="email.php" method="post">
 	<div id="formstore">
 		<div class="blk_most_enjoy">
 			<h2 class="title_steps">I most enjoy...</h2>
@@ -33,9 +33,9 @@
 				<div class="progress"></div>
 			</div>
 			<ol>
-				<li>1. Step one</li>
-				<li>2. Step two</li>
-				<li>3. Step three</li>
+				<li>Step one</li>
+				<li>Step two</li>
+				<li>Step three</li>
 			</ol>
 		</div>
 		<div class="blk_main_form">
@@ -58,10 +58,9 @@
 			<label for="phone">Phone</label>
 			<input type="text" id="phone" name="phone">
 			<div class="check_accept">
-				<label class="ip_check">
-					<input type="checkbox" class="checkbox" id="accept" name="accept">
-					<span class="outer"><span class="inner"></span></span>I accept that I will be contacted by an Entamio representative with the purpose of discussing education options, coaching and/or career planning.
-				</label>
+				<ul>
+					<li><input type="checkbox" name="accept" id="accept" value="accept"><label for="accept">I accept that I will be contacted by an Entamio representative with the purpose of discussing education options, coaching and/or career planning.</label></li>
+				</ul>
 			</div>
 			<div class="blk-submit">
 				<div class="ipt-submit">
@@ -70,7 +69,7 @@
 							<div></div>
 						</div>
 					</span>
-					<input type="submit" value="Upskill." name="submit" id="submit">
+					<input type="submit" value="Upskill" name="submit" id="submit">
 				</div>
 			</div>
 		</div>

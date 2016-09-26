@@ -263,12 +263,12 @@ header {
     		position: relative;
     		display: inline-block;
     		input[type=submit] {
-          background: $red;
+          background: $orange;
           color: $white;
           border: 0;
-          font-size: 28px;
+          font-size: 30px;
           border-radius: 7px;
-          padding: 10px 20px;
+          padding: 12px 20px;
     			display: inline-block;
     	    cursor: pointer;
     	    outline: 0;
@@ -301,71 +301,89 @@ header {
   		display: none;
   	}
     .check_accept {
-      display: flex;
-      display: -ms-flexbox;
+      display: block;
       margin-top: 50px;
-      .ip_check {
-        display: flex;
-        display: -ms-flexbox;
-        font-size: 20px;
-        cursor: pointer;
-        margin-right: 25px;
-      }
-      .ip_check:hover .inner {
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-      }
-      .ip_check input {
-        width: 1px;
-        height: 1px;
-        opacity: 0;
-      }
-      .ip_check input:checked + .outer {
-          border: 1px solid $orange;
-      }
-      .ip_check input:checked + .outer .inner {
-          -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-          transform: scale(1);
-          opacity: 1;
-      }
-      .ip_check input:focus + .outer .inner {
-        -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-        transform: scale(1);
-        opacity: 1;
-        background-color: $orange;
-      }
-      .ip_check .outer {
-        display: block;
-        margin: 10px 15px 10px 0;
-        padding: 3px;
-        border: 1px solid $orange;
-        border-radius: 50%;
-        background-color: $white;
-      }
-      .ip_check .inner {
-        -webkit-transition: all 0.25s ease-in-out;
-        transition: all 0.25s ease-in-out;
-        width: 16px;
-        height: 16px;
-        -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-        transform: scale(0);
-        display: block;
-        margin: 2px;
-        border-radius: 50%;
-        background-color: $orange;
-        opacity: 0;
-      }
-      #accept {
-        visibility: hidden;
-        width: 0;
-        height: 0;
-        margin: 0;
-        padding: 0;
+      ul {
+      	list-style: none;
+      	padding: 0;
+      	margin: 0;
+      	max-width: inherit;
+        text-align: left;
+        li {
+        	margin: 0 auto;
+        	padding: 0;
+        	position: relative;
+          label {
+          	display: flex;
+          	position: relative;
+          	font-size: 1em;
+            font-weight: 100;
+          	padding: 0 0 0 63px;
+            background: none;
+          	vertical-align: top;
+            color: $orange;
+          	cursor: pointer;
+          	-webkit-transition: color 0.3s;
+          	transition: color 0.3s;
+          }
+          input[type="checkbox"],
+          input[type="radio"],
+          label::before {
+          	width: 50px;
+          	height: 50px;
+          	top: 50%;
+          	left: 0;
+          	margin-top: -25px;
+          	position: absolute;
+          	cursor: pointer;
+          }
+          input[type="checkbox"],
+          input[type="radio"] {
+          	opacity: 0;
+          	-webkit-appearance: none;
+          	display: inline-block;
+          	vertical-align: middle;
+          	z-index: 100;
+            pointer-events: none;
+          }
+          .ac-radio {
+            label::before {
+          	   border-radius: 50%;
+            }
+          }
+          input[type="checkbox"]:checked + label,
+          input[type="radio"]:checked + label {
+          	color: $orange;
+          }
+          input[type="checkbox"]:checked + label::before,
+          input[type="radio"]:checked + label::before {
+          	opacity: 0.8;
+          }
+          /* General SVG and path styles */
+
+          svg {
+          	position: absolute;
+          	width: 40px;
+          	height: 40px;
+          	top: 50%;
+          	margin-top: -20px;
+          	left: 5px;
+          	pointer-events: none;
+          }
+          svg path {
+          	stroke: $orange;
+          	stroke-width: 13px;
+          	stroke-linecap: round;
+          	stroke-linejoin: round;
+          	fill: none;
+          }
+        }
+        label::before {
+        	content: '';
+        	border: 4px solid #b8242c;
+        	-webkit-transition: opacity 0.3s;
+        	transition: opacity 0.3s;
+        }
       }
     }
     .msg_contact {
@@ -452,23 +470,33 @@ header {
     	list-style: none;
     	padding: 10px;
     	margin: 10px auto;
-    	max-width: 65%;
+    	max-width: 55%;
       text-align: center;
       li {
       	margin: 0 auto;
-      	padding: 2em 0;
+      	padding: 0.7em 0;
       	position: relative;
         label {
         	display: flex;
         	position: relative;
-        	font-size: 1.8em;
-          font-weight: 400;
-        	padding: 0 0 0 63px;
+        	font-size: 1.5em;
+          font-weight: 100;
+          text-align: left;
+        	padding: 22px 63px 22px 18px;
+          border-radius: 7px;
         	vertical-align: top;
-        	color: #b8242c;
+        	background: #b8242c;
+          color: $white;
         	cursor: pointer;
         	-webkit-transition: color 0.3s;
         	transition: color 0.3s;
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          -o-transition: all 0.3s;
+          transition: all 0.3s;
+        }
+        label:hover {
+          background: $orange;
         }
         input[type="checkbox"],
         input[type="radio"],
@@ -476,7 +504,7 @@ header {
         	width: 50px;
         	height: 50px;
         	top: 50%;
-        	left: 0;
+        	right: 0;
         	margin-top: -25px;
         	position: absolute;
         	cursor: pointer;
@@ -488,11 +516,12 @@ header {
         	display: inline-block;
         	vertical-align: middle;
         	z-index: 100;
+          pointer-events: none;
         }
       }
       label::before {
       	content: '';
-      	border: 4px solid #b8242c;
+      	/*border: 4px solid #b8242c;*/
       	-webkit-transition: opacity 0.3s;
       	transition: opacity 0.3s;
       }
@@ -505,7 +534,8 @@ header {
   }
   .ac-custom input[type="checkbox"]:checked + label,
   .ac-custom input[type="radio"]:checked + label {
-  	color: #f04e3e;
+  	color: $white;
+    background: $orange;
   }
   .ac-custom input[type="checkbox"]:checked + label::before,
   .ac-custom input[type="radio"]:checked + label::before {
@@ -519,11 +549,11 @@ header {
   	height: 40px;
   	top: 50%;
   	margin-top: -20px;
-  	left: 5px;
+  	right: 16px;
   	pointer-events: none;
   }
   .ac-custom svg path {
-  	stroke: #f04e3e;
+  	stroke: $white;
   	stroke-width: 13px;
   	stroke-linecap: round;
   	stroke-linejoin: round;
@@ -570,7 +600,7 @@ header {
   .ac-list svg {
   	width: 100%;
   	height: 80px;
-  	left: 0;
+  	left: 15px;
   	top: 1.2em;
   	margin-top: 0px;
   }
@@ -666,26 +696,24 @@ footer {
 		display: -ms-flexbox;
     width: 100%;
 		.blk_footer_entamio {
-      width: 25%;
+      width: 30%;
 		}
 		.blk_footer_content {
       width: 30%;
 			font-size: 18px;
 			font-weight: 400;
-			padding: 0 10px 0 20px;
 			p {
 				margin: 0;
 			}
 		}
 		.blk_footer_icon {
-      width: 30%;
-			padding: 0 20px 0 10px;
+      width: 25%;
       text-align: right;
 			a {
 				display: inline-block;
-				margin: 0 7px;
+				margin: 0 6px;
 				span{
-					font-size: 42px;
+					font-size: 38px;
 				}
 			}
 		}
@@ -733,15 +761,61 @@ footer {
 
 @media only screen and (max-width: 992px) {
 
-
-
-}
-
-@media only screen and (max-width: 767px) {
-
-  header#header, section#section {
-    padding-left: 0;
-    padding-right: 0;
+  .blk_form {
+    padding: 20px 10px;
+    .ac-custom {
+      padding: 0;
+      h2.title_steps{
+        max-width: inherit;
+        font-size: 2.3em;
+      }
+      ul {
+        max-width: inherit;
+        li {
+          label {
+            font-size: 1.3em;
+          }
+        }
+      }
+    }
+    #formstore {
+      .progressive_bar {
+        max-width: inherit;
+        ol {
+          li{
+            font-weight: 100;
+            font-size: 14px;
+          }
+        }
+      }
+      .check_accept {
+        ul {
+          li {
+            label {
+              font-size: 0.7em;
+            }
+          }
+        }
+      }
+      .blk_main_form {
+        .ideal_for_you {
+          width: 100%;
+          display: block;
+          h4 {
+            width: 100%;
+          }
+          .blk_diplomas {
+            width: 100%;
+            font-size: 20px;
+          }
+        }
+      }
+      .msg_contact {
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
   }
   footer .bottom_footer {
     display: block;
@@ -761,6 +835,132 @@ footer {
       }
     }
   }
+
+}
+
+@media only screen and (max-width: 767px) {
+
+  header {
+    padding-top: 15px;
+    .banner_top {
+      background-position: -500px 0;
+      h1 {
+        font-size: 26px;
+        top: 15%;
+      }
+      h2 {
+        line-height: inherit;
+        font-size: 18px;
+        top: 35%;
+      }
+    }
+  }
+  header#header, section#section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  header .top_header {
+    display: block;
+    .top_left,
+    .top_right {
+      width: 100%;
+      display: block;
+    }
+    .top_right {
+      margin-top: 20px;
+      text-align: left;
+    }
+  }
+  .banner_footer {
+    background-position: -300px 0;
+    h2 {
+      top: 8%;
+      right: 20px;
+      font-size: 25px;
+      width: 75%;
+    }
+  }
+  .blk_form {
+    padding: 20px 10px;
+    .ac-custom {
+      padding: 0;
+      h2.title_steps{
+        max-width: inherit;
+        font-size: 2.1em;
+      }
+      ul {
+        max-width: inherit;
+        li {
+          label {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+    #formstore {
+      .progressive_bar {
+        max-width: inherit;
+        ol {
+          li{
+            font-weight: 100;
+            font-size: 14px;
+          }
+        }
+      }
+      .check_accept {
+        ul {
+          li {
+            label {
+              font-size: 0.7em;
+            }
+          }
+        }
+      }
+      .blk_main_form {
+        .ideal_for_you {
+          width: 100%;
+          display: block;
+          h4 {
+            width: 100%;
+          }
+          .blk_diplomas {
+            width: 100%;
+            font-size: 20px;
+          }
+        }
+      }
+      .msg_contact {
+        h2 {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+  .blk_opportunities {
+    .blk_icons {
+      span {
+        font-size: 120px;
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  footer {
+    .back_white{
+      .col-sm-12 {
+       display: block;
+       .left_copy,
+       .right_copy {
+         text-align: left;
+         width: 100%;
+         padding: 15px 20px;
+       }
+     }
+   }
+  }
+
 
 }
 

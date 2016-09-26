@@ -3,8 +3,8 @@ require 'vendor/autoload.php';
 use Mailgun\Mailgun;
 
 //Your credentials
-$mg = new Mailgun("key-9d6cb3f7fb70b594a4fdd2062a72ba74");
-$domain = "mg.ivanlucasgoncalves.com.br";
+$mg = new Mailgun("key-969eeee999f4fd5c20ff2ed600cfeacf");
+$domain = "mg.entamio.com";
 
 // Create array of courses
 $courses = array();
@@ -25,12 +25,12 @@ $name = isset($_POST['name']) ? strip_tags($_POST['name']) : '';
 $email = isset($_POST['email']) ? strip_tags($_POST['email']) : '';
 $phone = isset($_POST['phone']) ? strip_tags($_POST['phone']) : '';
 
-$subject = "EduSales | $name";
+$subject = "EduSales Entamio| $name";
 $header = file_get_contents('email/header.php'); //Get Header HTML
 $footer = file_get_contents('email/footer.php'); //Get Footer HTML
 $message = $header .
       '<br/><p>Hi,' .
-      '<br/>You have received a response from the EduSales.</p>' .
+      '<br/>You have received a response from the EduSales Entamio.</p>' .
       '<p><strong>Ideal for you:</strong> ' . implode(' | ', $courses) . '</p>' .
       '<p><strong>Name:</strong> '.$name.'</p>' .
       '<p><strong>Email:</strong> '.$email.'</p>' .
@@ -41,8 +41,8 @@ $message = $header .
 
 // Result should set up before the header
 $result = $mg->sendMessage($domain, array(
-  'from'    => 'Ivan Lucas <ivan.goncalves@gotamio.com>',
-  'to'      => 'Ivan Lucas <ivan.goncalves@gotamio.com>',
+  'from'    => 'Entamio Education Group <nextstep@entamio.com>',
+  'to'      => 'Entamio Education Group <nextstep@entamio.com>',
   'subject' => $subject,
   'text'    => strip_tags($message),
   'html'    => $message
