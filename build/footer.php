@@ -25,11 +25,9 @@
 								<a href="https://plus.google.com/u/0/+EntamioEducationGroup/videos" target="_blank"><span class="icon-google-plus"></span></a>
 							</div>
 							<div class="blk_footer_nrt">
-								<a class="logo_nrt" href="/">
-									<figure>
-										<img src="../inc/img/logo_nrt.jpg" alt="Logo NRT">
-									</figure>
-								</a>
+								<figure class="logo_nrt">
+									<img src="../inc/img/logo_nrt.jpg" alt="Logo NRT">
+								</figure>
 							</div>
 					</div>
 				</div>
