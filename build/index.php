@@ -26,19 +26,19 @@ include('header.php'); ?>
 		<article class="blk_opportunities">
 			<div class="row blk_icons">
 				<div class="col-md-4">
-					<span class="icon-online"></span>
+					<img class="img-icons" src="../inc/img/online.svg" alt="Online">
 					<h3>Online</h3>
-					<p>Online learning, anytime</p>
+					<p>Accessible learning, any time</p>
 				</div>
 				<div class="col-md-4">
-					<span class="icon-coaching"></span>
+					<img class="img-icons" src="../inc/img/coaching.svg" alt="Coaching">
 					<h3>Coaching</h3>
-					<p>Exclusive career coaching</p>
+					<p>Redefine your career direction</p>
 				</div>
 				<div class="col-md-4">
-					<span class="icon-affordable"></span>
+					<img class="img-icons" src="../inc/img/affordable.svg" alt="Affordable">
 					<h3>Affordable</h3>
-					<p>Flexible payment options</p>
+					<p>Study now, pay later</p>
 				</div>
 			</div>
 		</article>
