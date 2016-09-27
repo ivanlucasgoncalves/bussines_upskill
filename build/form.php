@@ -39,7 +39,6 @@
 			</ol>
 		</div>
 		<div class="blk_main_form">
-			<h3>Congratulations!</h3>
 			<div class="ideal_for_you">
 				<h4>Ideal for you:</h4>
 				<!--/* Diplomas -->
