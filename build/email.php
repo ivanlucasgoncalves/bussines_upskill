@@ -25,12 +25,12 @@ $name = isset($_POST['name']) ? strip_tags($_POST['name']) : '';
 $email = isset($_POST['email']) ? strip_tags($_POST['email']) : '';
 $phone = isset($_POST['phone']) ? strip_tags($_POST['phone']) : '';
 
-$subject = "Recruitment Upskill Entamio | $name";
+$subject = "Business Upskill Entamio | $name";
 $header = file_get_contents('email/header.php'); //Get Header HTML
 $footer = file_get_contents('email/footer.php'); //Get Footer HTML
 $message = $header .
       '<br/><p>Hi,' .
-      '<br/>You have received a response from the Recruitment Upskill Entamio.</p>' .
+      '<br/>You have received a response from the Business Upskill Entamio.</p>' .
       '<p><strong>Ideal for you:</strong> ' . implode(' | ', $courses) . '</p>' .
       '<p><strong>Name:</strong> '.$name.'</p>' .
       '<p><strong>Email:</strong> '.$email.'</p>' .

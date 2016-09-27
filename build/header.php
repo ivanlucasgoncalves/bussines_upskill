@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Recruitment Upskill Entamio</title>
+	<title>Business Upskill Entamio</title>
 	<meta name="description" content="">
 
 	<meta charset="UTF-8">
