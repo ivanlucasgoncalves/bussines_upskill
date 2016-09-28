@@ -1,7 +1,7 @@
 # Gotamio Innovations Group Website
 
 ## Precursor
-A Marketing Request Form for **Gotamio** designed by **Jessie Milligan** and developed by **Ivan Lucas**. This project is managed by **Nicole Ashton-Brooks**.
+A Business Upskill for **Gotamio** designed by **Jessie Milligan** and developed by **Ivan Lucas**. This project is managed by **Nicole Ashton-Brooks**.
 
 ---
 

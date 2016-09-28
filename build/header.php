@@ -27,7 +27,7 @@
 								</a>
 							</div>
 							<div class="top_right">
-								<a class="tel" href="1300639837">1300 639 837</a>
+								<a class="tel" href="tel:1300639837">1300 639 837</a>
 							</div>
 						</div>
 					</div>
