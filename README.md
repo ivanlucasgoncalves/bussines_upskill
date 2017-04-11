@@ -1,4 +1,4 @@
-# Gotamio Innovations Group Website
+# Gotamio Innovations Group
 
 ## Precursor
 A Business Upskill for **Gotamio** designed by **Jessie Milligan** and developed by **Ivan Lucas**. This project is managed by **Nicole Ashton-Brooks**.
