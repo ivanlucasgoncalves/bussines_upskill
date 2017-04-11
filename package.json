@@ -6,7 +6,7 @@
   "author": {
     "name": "Ivan Lucas"
   },
-  "repository": "https://Yadu7715@bitbucket.org/gotamio/edusales-landing-page.git",
+  "repository": "https://github.com/ivanlucasgoncalves/bussines_upskill.git",
   "main": "Gruntfile.js",
   "dependencies": {
     "grunt": "*"
